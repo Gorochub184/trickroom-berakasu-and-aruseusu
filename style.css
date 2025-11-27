@@ -10,6 +10,7 @@ body {
     font-family: "Yu Gothic", sans-serif;
     background: #fffbe0; /* 薄い黄色ベース */
     color: #3b2e1c;
+    font-size: 1.15rem;
     line-height: 1.8;
     position: relative;
 }
@@ -17,25 +18,19 @@ body {
 /* ナビバー */
 .navbar {
     display: flex;
-    gap: 20px;
-    padding: 15px 30px;
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(6px);
+    gap: 24px;
+    padding: 16px 32px;
+
+    /* ガラス風をより強化 */
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
 
-.navbar a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #f5c542; /* ピカチュウイメージの黄色 */
-    transition: color 0.3s;
-}
-
-.navbar a:hover {
-    color: #ffde54;
+    border-bottom: 2px solid rgba(245, 197, 66, 0.35);
+    box-shadow: 0 4px 12px rgba(255, 200, 0, 0.15);
 }
 
 /* 背景用ピカチュウタイル */
@@ -95,6 +90,54 @@ span[style*="font-weight: bold"] {
     padding: 2px 4px;
     border-radius: 4px;
 }
+
+/* 目次 */
+/* 目次全体ボックス */
+.toc {
+    margin: 25px 0 35px;
+    padding: 20px 25px;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(4px);
+    border-radius: 16px;
+    box-shadow: 0 0 12px rgba(255, 200, 0, 0.25);
+    border-left: 4px solid #f5c542; /* ピカチュウイメージの黄色ライン */
+}
+
+/* 目次タイトル */
+.toc-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f5c542;
+    margin-bottom: 12px;
+}
+
+/* リンク一覧 */
+.toc a {
+    display: block;
+    margin: 6px 0;
+    padding: 8px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #3b2e1c;
+    border-radius: 10px;
+    
+    /* ピカチュウ黄色の優しいハイライト */
+    background: rgba(255, 235, 150, 0.3);
+    transition: all 0.25s ease;
+}
+
+/* ホバー時（ふわっと光る） */
+.toc a:hover {
+    background: rgba(255, 235, 150, 0.55);
+    color: #fd7676; /* h2 見出しと同じ赤 */
+    transform: translateX(4px); /* 少しだけ右に動いて“選んだ感” */
+}
+
+/* スクロール位置調整（固定ヘッダー対策） */
+h2, h3, h1 {
+    scroll-margin-top: 90px;
+}
+
 
 /* モバイル対応 */
 @media (max-width: 768px) {
