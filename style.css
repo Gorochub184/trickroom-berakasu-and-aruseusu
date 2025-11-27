@@ -33,6 +33,41 @@ body {
     box-shadow: 0 4px 12px rgba(255, 200, 0, 0.15);
 }
 
+/* リンクスタイル */
+.navbar a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+
+    /* 文字色は落ち着いたピカチュウイエロー */
+    color: #f5c542;
+
+    padding: 8px 14px;
+    border-radius: 10px;
+
+    /* ふんわり黄色のハイライト（通常時は控えめ） */
+    background: rgba(255, 240, 200, 0.25);
+    transition: all 0.25s ease;
+}
+
+/* ホバー（ほんの少し光って浮く） */
+.navbar a:hover {
+    background: rgba(255, 235, 150, 0.45);
+    color: #fd7676; /* h2 と統一（赤系でアクセント） */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 210, 0, 0.25);
+}
+
+/* クリック時：柔らかいへこみ感 */
+.navbar a:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 /* 背景用ピカチュウタイル */
 .pikachu-bg {
     position: fixed;
@@ -158,4 +193,5 @@ h2, h3, h1 {
         font-size: 1.2em;
     }
 }
+
 
