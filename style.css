@@ -7,7 +7,7 @@
 
 /* body全体 */
 body {
-    font-family: "Yu Gothic", sans-serif;
+    font-family: "Noto Sans JP", "Noto Sans Rounded JP", sans-serif;
     background: #fffbe0; /* 薄い黄色ベース */
     color: #3b2e1c;
     font-size: 1.15rem;
@@ -240,5 +240,6 @@ h2, h3, h1 {
         font-size: 1.1rem;
     }
 }
+
 
 
