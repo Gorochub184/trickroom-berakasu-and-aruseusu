@@ -194,4 +194,51 @@ h2, h3, h1 {
     }
 }
 
+/* モバイル対応強化 */
+@media (max-width: 768px) {
+
+    body {
+        font-size: 1.25rem;
+        line-height: 1.9;  /* 行間少し広め */
+        padding: 0 4px;    /* スマホ端の窮屈さ軽減 */
+    }
+
+    /* ナビバーをスマホ向けに調整 */
+    .navbar {
+        gap: 14px;
+        padding: 14px 20px;
+    }
+
+    .navbar a {
+        font-size: 1.1rem;
+        padding: 10px 16px;
+    }
+
+    /* main の読みやすさアップ */
+    main {
+        margin: 1.2em;
+        padding: 1.6em;
+        border-radius: 14px;
+    }
+
+    /* 見出しサイズUP（スマホだとここが大事） */
+    h1 {
+        font-size: 2.1rem;
+    }
+
+    h2 {
+        font-size: 1.65rem;
+    }
+
+    h3 {
+        font-size: 1.35rem;
+    }
+
+    /* 目次も指で押しやすく */
+    .toc a {
+        padding: 10px 14px;
+        font-size: 1.1rem;
+    }
+}
+
 
