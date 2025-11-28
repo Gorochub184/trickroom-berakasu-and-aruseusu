@@ -8,7 +8,7 @@
 /* body全体 */
 body {
     font-family: "Noto Sans JP", "Noto Sans Rounded JP", sans-serif;
-    background: #fffbe0; /* 薄い黄色ベース */
+    background: #fffdf7; /* 薄い黄色ベース */
     color: #3b2e1c;
     font-size: 1.15rem;
     line-height: 1.8;
@@ -64,23 +64,17 @@ body {
     box-shadow: none;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 /* 背景用ピカチュウタイル */
 .pikachu-bg {
-    position: fixed;
-    inset: 0;
-    z-index: -1;
     background: repeating-linear-gradient(
         45deg,
-        rgba(255, 238, 170, 0.15) 0px,
-        rgba(255, 238, 170, 0.15) 40px,
-        rgba(255, 240, 200, 0.1) 40px,
-        rgba(255, 240, 200, 0.1) 80px
+        rgba(255, 238, 170, 0.06) 0px,
+        rgba(255, 238, 170, 0.06) 40px,
+        rgba(255, 240, 200, 0.04) 40px,
+        rgba(255, 240, 200, 0.04) 80px
     );
 }
+
 
 /* メイン記事 */
 main {
@@ -95,8 +89,8 @@ main {
 
 /* 見出し */
 h1 {
-    font-size: 2rem;
-    color: #f5c542; /* 黄色ベースでピカチュウっぽく */
+    font-size: 3rem;
+    color: #f5c542;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -173,25 +167,8 @@ h2, h3, h1 {
     scroll-margin-top: 90px;
 }
 
-
-/* モバイル対応 */
-@media (max-width: 768px) {
-    main {
-        margin: 1.5em;
-        padding: 1.8em;
-    }
-
-    header h1 {
-        font-size: 1.5em;
-    }
-
-    h2 {
-        font-size: 1.4em;
-    }
-
-    h3 {
-        font-size: 1.2em;
-    }
+html {
+  scroll-behavior: smooth;
 }
 
 /* モバイル対応強化 */
@@ -240,6 +217,3 @@ h2, h3, h1 {
         font-size: 1.1rem;
     }
 }
-
-
-
