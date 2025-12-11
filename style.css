@@ -7,74 +7,12 @@
 
 /* body全体 */
 body {
-    font-family: "Noto Sans JP", "Noto Sans Rounded JP", sans-serif;
-    background: #fffdf7; /* 薄い黄色ベース */
+    font-family: "Yu Gothic", sans-serif;
+    background: #fffbe0; /* 薄い黄色ベース */
     color: #3b2e1c;
-    font-size: 1.15rem;
     line-height: 1.8;
     position: relative;
 }
-
-/* ナビバー */
-.navbar {
-    display: flex;
-    gap: 24px;
-    padding: 16px 32px;
-
-    /* ガラス風をより強化 */
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(10px);
-
-    position: sticky;
-    top: 0;
-    z-index: 100;
-
-    border-bottom: 2px solid rgba(245, 197, 66, 0.35);
-    box-shadow: 0 4px 12px rgba(255, 200, 0, 0.15);
-}
-
-/* リンクスタイル */
-.navbar a {
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-
-    /* 文字色は落ち着いたピカチュウイエロー */
-    color: #f5c542;
-
-    padding: 8px 14px;
-    border-radius: 10px;
-
-    /* ふんわり黄色のハイライト（通常時は控えめ） */
-    background: rgba(255, 240, 200, 0.25);
-    transition: all 0.25s ease;
-}
-
-/* ホバー（ほんの少し光って浮く） */
-.navbar a:hover {
-    background: rgba(255, 235, 150, 0.45);
-    color: #fd7676; /* h2 と統一（赤系でアクセント） */
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(255, 210, 0, 0.25);
-}
-
-/* クリック時：柔らかいへこみ感 */
-.navbar a:active {
-    transform: translateY(0);
-    box-shadow: none;
-}
-
-/* 背景用ピカチュウタイル */
-.pikachu-bg {
-    background: repeating-linear-gradient(
-        45deg,
-        rgba(255, 238, 170, 0.06) 0px,
-        rgba(255, 238, 170, 0.06) 40px,
-        rgba(255, 240, 200, 0.04) 40px,
-        rgba(255, 240, 200, 0.04) 80px
-    );
-}
-
 
 /* メイン記事 */
 main {
@@ -89,8 +27,8 @@ main {
 
 /* 見出し */
 h1 {
-    font-size: 3rem;
-    color: #f5c542;
+    font-size: 2rem;
+    color: #f5c542; /* 黄色ベースでピカチュウっぽく */
     margin-bottom: 20px;
     text-align: center;
 }
@@ -109,7 +47,8 @@ h3 {
 
 /* 段落 */
 p {
-    margin-bottom: 16px;
+    margin: 0 0 16px;
+    line-height: 1.7;
 }
 
 /* 強調 */
@@ -120,100 +59,27 @@ span[style*="font-weight: bold"] {
     border-radius: 4px;
 }
 
-/* 目次 */
-/* 目次全体ボックス */
-.toc {
-    margin: 25px 0 35px;
-    padding: 20px 25px;
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(4px);
-    border-radius: 16px;
-    box-shadow: 0 0 12px rgba(255, 200, 0, 0.25);
-    border-left: 4px solid #f5c542; /* ピカチュウイメージの黄色ライン */
-}
-
-/* 目次タイトル */
-.toc-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #f5c542;
-    margin-bottom: 12px;
-}
-
-/* リンク一覧 */
-.toc a {
-    display: block;
-    margin: 6px 0;
-    padding: 8px 12px;
-    text-decoration: none;
-    font-weight: bold;
-    color: #3b2e1c;
-    border-radius: 10px;
-    
-    /* ピカチュウ黄色の優しいハイライト */
-    background: rgba(255, 235, 150, 0.3);
-    transition: all 0.25s ease;
-}
-
-/* ホバー時（ふわっと光る） */
-.toc a:hover {
-    background: rgba(255, 235, 150, 0.55);
-    color: #fd7676; /* h2 見出しと同じ赤 */
-    transform: translateX(4px); /* 少しだけ右に動いて“選んだ感” */
-}
-
-/* スクロール位置調整（固定ヘッダー対策） */
-h2, h3, h1 {
-    scroll-margin-top: 90px;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-/* モバイル対応強化 */
-@media (max-width: 768px) {
-
+@media (max-width: 600px) {
     body {
-        font-size: 1.25rem;
-        line-height: 1.9;  /* 行間少し広め */
-        padding: 0 4px;    /* スマホ端の窮屈さ軽減 */
+        font-size: 18px; /* ★ 普段より大きくして読みやすくする */
+        line-height: 1.9;
     }
 
-    /* ナビバーをスマホ向けに調整 */
-    .navbar {
-        gap: 14px;
-        padding: 14px 20px;
-    }
-
-    .navbar a {
-        font-size: 1.1rem;
-        padding: 10px 16px;
-    }
-
-    /* main の読みやすさアップ */
     main {
-        margin: 1.2em;
-        padding: 1.6em;
-        border-radius: 14px;
+        max-width: 25em; /* ★ 横幅を25文字に固定 */
+        margin: 40px auto;
+        padding: 24px 20px;
     }
 
-    /* 見出しサイズUP（スマホだとここが大事） */
     h1 {
-        font-size: 2.1rem;
+        font-size: 1.8rem;
     }
 
     h2 {
-        font-size: 1.65rem;
+        font-size: 1.4rem;
     }
 
     h3 {
-        font-size: 1.35rem;
-    }
-
-    /* 目次も指で押しやすく */
-    .toc a {
-        padding: 10px 14px;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 }
